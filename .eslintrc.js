@@ -1,56 +1,56 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
+  env: {
+    browser: true,
+    es2021: true,
     'react-native/react-native': true,
   },
-  'extends': [
+  extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
   ],
-  'overrides': [
+  overrides: [
     {
-      'env': {
-        'node': true
+      env: {
+        node: true,
       },
-      'files': [
-        '.eslintrc.{js,cjs}'
+      files: [
+        '.eslintrc.{js,cjs}',
       ],
-      'parserOptions': {
-        'sourceType': 'script'
-      }
-    }
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
   ],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true
-    } ,
-    'sourceType': 'module'
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+
+    sourceType: 'module',
   },
-  'plugins': [
+  plugins: [
     '@typescript-eslint',
     'react',
-    'react-native'
+    'react-native',
   ],
-  'rules': {
-    'indent': [
+  rules: {
+    indent: [
       'error',
-      2
+      2,
     ],
     'linebreak-style': [
       'error',
-      'unix'
+      'unix',
     ],
-    'quotes': [
+    quotes: [
       'error',
-      'single'
+      'single',
     ],
-    'semi': [
+    semi: [
       'error',
-      'always'
+      'always',
     ],
     'react/react-in-jsx-scope': 0,
-  }
+    'no-trailing-spaces': 'error',
+  },
 };
